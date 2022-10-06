@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const TodoForm = () => {
-  return <div>TodoForm</div>;
+  const [input, setInput] = useState('');
+  return (
+    <form className="todo-form">
+      <input type="text" placeholder="Add a todo" value={input} />
+    </form>
+  );
 };
 
 export default TodoForm;
